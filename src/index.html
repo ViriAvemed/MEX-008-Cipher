@@ -7,7 +7,23 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hola mundo!</h1>
+      <h1>Cifrado Cesar</h1>
+    </div>
+    <div>
+        <label for="id_mensajea" >Mensaje</label>
+        <p><input type="text" id= "id_mensajeacifrar" onblur="upperCase()", name="cifrar"/></p>
+       <label for="id_offset" >Desplazar</label>
+       <p></p><input type="text" id= "id_offset" name="desplazamiento"/></p>
+       <p>
+         <input type="button" value="cifrar" name="Cifrar" id="id_cifrar"/>
+         <input type="button" value="decifrar" name="Decifrar" id="id_decifrar"/>
+       </p>
+       <label for="id_resultado" >Resultado</label>
+       <p></p><input type="text" id= "id_resultado"/></p>
+      </div>
+       
+       
+       
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
