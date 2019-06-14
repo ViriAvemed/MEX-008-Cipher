@@ -64,6 +64,6 @@ function decipher (){
     newMsjD+=String.fromCharCode(getcif);
 }
     document.getElementById("id_resultado").value=newMsjD;
-}
+    }
 
 document.getElementById("id_decifrar").addEventListener("click",decipher);
