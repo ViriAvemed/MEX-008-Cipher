@@ -41,20 +41,29 @@ function soloLetras(e) {
  }
 
  function cipher(){
-     let getC = document.getElementById("id_mensajeacifrar").value;
-     let dezplazamiento= Number (document.getElementById("id_offset").value);
-     console.log(typeof id)
-     let textonuevo="";
-     let getCifra= [];
-     for (let i=0; i<getC.length; i++){
-        getCifra= ((getC.charCodeAt(i)-65+dezplazamiento)%26+65);
-        textonuevo+=String.fromCharCode(getCifra);       
+     let firstMsjC = document.getElementById("id_mensajeacifrar").value;
+     let ofssetNumC= Number (document.getElementById("id_offset").value);
+     let newMsjC="";
+     for (let i=0; i<firstMsjC.length; i++){
+       let getCodi= firstMsjC.charCodeAt(i);
+       let newCipher= (getCodi-65+ofssetNumC)%26+65;
+        newMsjC+=String.fromCharCode(newCipher);       
      }
-        document.getElementById("id_resultado").value=textonuevo;
+        document.getElementById("id_resultado").value=newMsjC;
 }
 document.getElementById("id_cifrar").addEventListener("click",cipher);
 
 function decipher (){
     
+    let firstMsjD =document.getElementById("id_mensajeacifrar").value;
+    let ofssetNumD = Number (document.getElementById("id_offset").value);
+    let newMsjD="";    
+    for (let i=0; i<firstMsjD.length; i++){
+    let getcod= firstMsjD.charCodeAt(i);
+    let getcif=(getcod-65-ofssetNumD)%26+65;
+    newMsjD+=String.fromCharCode(getcif);
 }
-    
+    document.getElementById("id_resultado").value=newMsjD;
+}
+
+document.getElementById("id_decifrar").addEventListener("click",decipher);
