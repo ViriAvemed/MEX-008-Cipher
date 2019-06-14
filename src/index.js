@@ -40,9 +40,9 @@ function soloLetras(e) {
          return false;
  }
 
- function cipher(){
+ const cipher = () => {
      let firstMsjC = document.getElementById("id_mensajeacifrar").value;
-     let ofssetNumC= Number (document.getElementById("id_offset").value);
+     let ofssetNumC= parseInt (document.getElementById("id_offset").value);
      let newMsjC="";
      for (let i=0; i<firstMsjC.length; i++){
        let getCodi= firstMsjC.charCodeAt(i);
@@ -50,13 +50,13 @@ function soloLetras(e) {
         newMsjC+=String.fromCharCode(newCipher);       
      }
         document.getElementById("id_resultado").value=newMsjC;
+        return newMsjD;
 }
 document.getElementById("id_cifrar").addEventListener("click",cipher);
 
-function decipher (){
-    
+const decipher = () => {
     let firstMsjD =document.getElementById("id_mensajeacifrar").value;
-    let ofssetNumD = Number (document.getElementById("id_offset").value);
+    let ofssetNumD = parseInt (document.getElementById("id_offset").value);
     let newMsjD="";    
     for (let i=0; i<firstMsjD.length; i++){
     let getcod= firstMsjD.charCodeAt(i);
@@ -64,6 +64,7 @@ function decipher (){
     newMsjD+=String.fromCharCode(getcif);
 }
     document.getElementById("id_resultado").value=newMsjD;
+    return newMsjD;
     }
 
 document.getElementById("id_decifrar").addEventListener("click",decipher);
