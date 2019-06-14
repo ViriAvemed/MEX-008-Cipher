@@ -11,9 +11,9 @@
     </div>
     <div>
         <label for="id_mensajea" >Mensaje</label>
-        <p><input type="text" id= "id_mensajeacifrar" onblur="upperCase()", name="cifrar"/></p>
+        <p><input type="text" id= "id_mensajeacifrar" onkeyup="upperCase()"  name="cifrar" onkeypress="return soloLetras(event)"/></p>
        <label for="id_offset" >Desplazar</label>
-       <p></p><input type="text" id= "id_offset" name="desplazamiento"/></p>
+       <p></p><input type="text" id= "id_offset" name="desplazamiento" onkeypress="return soloNumeros(event)"  /></p>
        <p>
          <input type="button" value="cifrar" name="Cifrar" id="id_cifrar"/>
          <input type="button" value="decifrar" name="Decifrar" id="id_decifrar"/>
