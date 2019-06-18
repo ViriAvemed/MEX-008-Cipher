@@ -1,3 +1,1 @@
-window.cipher = {
-  // ... 
-};
+//window.cipher = {

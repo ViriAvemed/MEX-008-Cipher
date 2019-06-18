@@ -1,70 +1,59 @@
 
-function upperCase() {//está función va convertir el texto ingresado a mayusculas
-  let mayus = document.getElementById("id_mensajeacifrar").value; //primero se toma el texto que ingresa el usuario
-   document.getElementById("id_mensajeacifrar").value = mayus.toUpperCase();// a ese texto se convierte a mayúsculas
-}
+function encode () {
+    let offset = document.getElementById("id_offset").value;
+    let text= document.getElementById("id_mensajeacifrar").value;
+    let newText="";
+    offset = parseInt(offset);
+   
+      for ( let i=0; i<text.length; i++){
+        let newAscii=0;
+        let codeAscii = text.charCodeAt(i);
 
-function soloNumeros(e) { //Está función permite restringir la entrada de texto
-   let key = e.keyCode || e.which;
-   let tecla = String.fromCharCode(key);
-   let numeros = "1234567890";
-   let especiales = [8, 37, 39, 46];
-
-   let tecla_especial = false
-    for(let i in especiales) {
-        if(key == especiales[i]) {
-            tecla_especial = true;
-            break;
-        }
-    }
-
-    if(numeros.indexOf(tecla) == -1 && !tecla_especial)
-        return false;
-}
-
-function soloLetras(e) {
-    let key = e.keyCode || e.which;
-    let tecla = String.fromCharCode(key);
-    let letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let especiales = [8, 37, 39, 46];
- 
-    let tecla_especial = false
-     for(let i in especiales) {
-         if(key == especiales[i]) {
-             tecla_especial = true;
-             break;
+         if (codeAscii >=65 && codeAscii<=90){
+            newAscii = (codeAscii-65+offset)%26+65;
+         } else if (codeAscii >=97 && codeAscii<=122){
+            newAscii = (codeAscii-97+offset)%26+97;
+         } else if (codeAscii >=32 && codeAscii<=64){
+           newAscii=codeAscii;
          }
-     }
- 
-     if(letras.indexOf(tecla) == -1 && !tecla_especial)
-         return false;
- }
-
- const cipher = () => {
-     let firstMsjC = document.getElementById("id_mensajeacifrar").value;
-     let ofssetNumC= parseInt (document.getElementById("id_offset").value);
-     let newMsjC="";
-     for (let i=0; i<firstMsjC.length; i++){
-       let getCodi= firstMsjC.charCodeAt(i);
-       let newCipher= (getCodi-65+ofssetNumC)%26+65;
-        newMsjC+=String.fromCharCode(newCipher);       
-     }
-        document.getElementById("id_resultado").value=newMsjC;
-        return newMsjD;
-}
-document.getElementById("id_cifrar").addEventListener("click",cipher);
-
-const decipher = () => {
-    let firstMsjD =document.getElementById("id_mensajeacifrar").value;
-    let ofssetNumD = parseInt (document.getElementById("id_offset").value);
-    let newMsjD="";    
-    for (let i=0; i<firstMsjD.length; i++){
-    let getcod= firstMsjD.charCodeAt(i);
-    let getcif=(getcod-65-ofssetNumD)%26+65;
-    newMsjD+=String.fromCharCode(getcif);
-}
-    document.getElementById("id_resultado").value=newMsjD;
-    return newMsjD;
+           let letter=String.fromCharCode(newAscii);
+           newText+=letter;    
+       }    
+        document.getElementById("id_resultado").value=newText;
+       return newText;
     }
+     document.getElementById("id_cifrar").addEventListener("click",encode);
 
-document.getElementById("id_decifrar").addEventListener("click",decipher);
+ function decode () {
+    let offset = document.getElementById("id_offset").value;
+    let text= document.getElementById("id_mensajeacifrar").value;
+    let newText = "";
+    offset = parseInt(offset);
+
+         for ( let i=0; i<text.length; i++){
+           let newAscii=0;
+           let codeAscii = text.charCodeAt(i);
+
+           if (codeAscii >=65 && codeAscii<=90){
+             let a1=((codeAscii-65-offset)%26); 
+             if(a1<0){
+                 a1=a1+26;
+             }
+               newAscii=a1+65;
+
+           } else if (codeAscii >=97 && codeAscii<=122){
+             let a1=((codeAscii-97-offset)%26); 
+             if(a1<0){
+                 a1=a1+26;
+             }
+               newAscii=a1+97;
+             } else if (codeAscii >=32 && codeAscii<=64){
+               newAscii=codeAscii;
+             }
+               let newLetter=String.fromCharCode(newAscii);
+               newText+=newLetter;   
+         }    
+         document.getElementById("id_resultado").value=newText;
+         return newText;
+      }
+       document.getElementById("id_decifrar").addEventListener("click",decode);
