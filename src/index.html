@@ -2,29 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Padlock</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>CIFRADO CÉSAR</h1>
+      <h1>Padlock</h1>
+    </div>
+
+    <div id="screenCif">
+
+       <label for="id_msjACifrar" > Inserta tu mensaje: </label>
+       <input type="tetx" id= "id_msjACifrar"   name="porcifrar" >
+
+       <label for="id_offsetCif" >Ellige un número de seguridad:</label>
+       <input type="text" id= "id_offsetCif" name="desplazamiento" placeholder="Ingresa cualquier número">
+
+       <input type="button" value="cifrar" name="botonCifrar" id="id_cifrar">
     </div>
     <div>
-        <label for="id_mensajea" >Inserta tu mensaje:</label>
-        <p><textarea name="textarea" rows="10" cols="50"id= "id_mensajeacifrar"   name="cifrar" ></textarea></p>
-       <label for="id_offset" >Ellige un número de seguridad:</label>
-       <p></p><input type="text" id= "id_offset" name="desplazamiento" placeholder="Ingresa cualquier número"  /></p>
-       <p>
-         <input type="button" value="cifrar" name="Cifrar" id="id_cifrar"/>
-         <input type="button" value="decifrar" name="Decifrar" id="id_decifrar"/>
-       </p>
-       <label for="id_resultado"  >Tú nuevo mensaje es:</label>
-       <p></p><textarea name="textarea" rows="10" cols="50" id= "id_resultado"></textarea></p>
-      </div>
-       
-       
-       
+      <p id="id_result" ></p>
+
     </div>
+
+    <div id="screenDec">
+
+      <label for="id_msjADecifrar" > Inserta tu mensaje: </label>
+      <input type="tetx" id= "id_msjADecifrar"   name="pordecifrar" >
+
+      <label for="id_offsetDecif" >Ellige un número de seguridad:</label>
+      <input type="text" id= "id_offsetDecif" name="desplazamientoD" placeholder="Ingresa cualquier número">
+
+      <input type="button" value="decifrar" name="Decifrar" id="id_decifrar">
+
+      <p id="id_result2" > </p>
+
+    </div>
+
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
