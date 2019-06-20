@@ -8,6 +8,9 @@ a lo anterior procuro crear contraseñas fáciles de recordar lo que incrementa 
 Apartir de esto surgió la idea de crear una aplicación que por un lado de permita crear una contraseña con un gran nivel de dificultad 
 y por el otro se guarde de manera cifrada.
 
+- Prototipo
+
+![Prototipo](imagenes/prototipo.PNG)
 
 - Quiénes son los principales usuarios de producto.
 
@@ -36,26 +39,48 @@ Padlock puede ser consultado desde un celular hasta en una computadora, pues al 
 guardada en la nube. Los pasos de uso son los siguientes.
 
 1. Crear usuario y contraseña.
+![Registro](imagenes/1.PNG)
 
-1. Crear una nueva clave ingresando: 
+2. Consulta las instrucciones. 
+
+![Pasos](imagenes/2.PNG)
+
+3. Ve al ménu de opciones:
+
+![Opciones](imagenes/3.PNG)
+
+4. Crear una nueva clave ingresando: 
    - Nombre de aplicación.
    - Correo electrónico.
    - Cualquier palabra con cualquier letra, carácter o número que quieras como contraseña.
    - Tú feche de nacimiento a seis dígitos.
+   
+   ![Nueva clave](imagenes/4.PNG)
+   
    - Pulsar aceptar para almacenarla.
    
-2. Consultar una contraseña:
+   ![Aceptar](imagenes/5.PNG)
+   
+5. Consultar una contraseña:
    - Ir al menú de contraseñas guardadas.
    - Dar click sobre el icono de la aplicación.
    - A continuación se desplegará la contraseña cifrada y el correo almacenado.
    
- 3. Consultar:    
-   - Ingresa a consulta.
+   ![Guardadas](imagenes/4.5.PNG) 
+   
+6. Consultar:    
+   - Ingresa a consulta.  
    - Inserta la clave cifrada que puedes consultar o copiar en la sección anterior.
    - Insertta tu fecha de nacimiento a seis dígitos.
+   
+    ![Consulta](imagenes/6.PNG)
+    
    - Pulsa guardar para ver contraseña descifrada.
-
-FUNCIONALIDAD
+   
+     ![Consulta](imagenes/7.PNG)
+     
+     
+#### FUNCIONALIDAD
 
 La funcionalidad de Padlock consiste en guardar contraseñas de forma encriptada para que sólo el usuario pueda desencriptarlas
 con un número que es díficil de olvidad, la fecha de nacimiento, no obstante si el usuario lo prefiere puede ser cualquier número
