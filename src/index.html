@@ -7,35 +7,115 @@
   </head>
   <body>
     <div id="root">
+      
       <h1>Padlock</h1>
+      <p><input type="text" placeholder="ingresa tu e-mail" id="id_usuario"></p>
+      <p><input type="text"  id="id_contraseña" placeholder="ingresa tu contraseña"></p>
+      <p><input type="button" value="ingresar" id="id_ingresar"></p>
+
+      
     </div>
 
-    <div id="screenCif">
+    <div id="menu">
+      <h1 "id_titlePaswords">Tus contraseñas</h1>
+    <p><input type="button" value="Guardadas" id="id_Paswords"></p>
+    <p><input type="button" value="Generar nueva" id="id_newPasword"></p>
+    <p><input type="button" value="Consultar" id="id_newPasword"></p>
+    <p><input type="button" value="Atras" id="id_returnStar"></p>
 
-       <label for="id_msjACifrar" > Inserta tu mensaje: </label>
-       <input type="tetx" id= "id_msjACifrar"   name="porcifrar" >
-
-       <label for="id_offsetCif" >Ellige un número de seguridad:</label>
-       <input type="text" id= "id_offsetCif" name="desplazamiento" placeholder="Ingresa cualquier número">
-
-       <input type="button" value="cifrar" name="botonCifrar" id="id_cifrar">
     </div>
-    <div>
+
+    <div id="id_PaswordsSaved">
+      <h1 id="id_titilePS"> Contraseñas guardadas</h1>
+      <p><input type="button" value="Guardar" id="id_savedPass"></p>
+      <p>
+        <input type="button" value="Atras" id="id_retunrMenu">
+        <input type="button" value="Inicio" id="id_returnHome">
+      </p>
+
+    </div>
+
+    <div id="id_NewPass">
+      <h1 id="id_titlNP"> Nueva contraseña </h1>
+      <label id="id_app">Aplicación</label>
+      <select name="App" id="id_app">
+        <option value=""></option>
+        <option value="app1">Airbnb</option>
+        <option value="app2">Amazon</option>
+        <option value="app3">BBVA móvil</option>
+        <option value="app4">BlaBlaCar</option>
+        <option value="app5">Cabify</option>
+        <option value="app6">Cinemex</option>
+        <option value="app7">Cinépolis</option>
+        <option value="app8">Citibanamex móvil</option>
+        <option value="app9">Didi</option>
+        <option value="app10">Facebook</option>
+        <option value="app11">Github</option>
+        <option value="app12">Gmail</option>
+        <option value="app13">HBO GO</option>
+        <option value="app14">HSBC móvil</option>
+        <option value="app15">Instagram</option>
+        <option value="app16">Linkedin</option>
+        <option value="app17">Marvel app</option>
+        <option value="app18">Movistar MX</option>
+        <option value="app19">Netflix</option>
+        <option value="app20">Outlook</option>
+        <option value="app21">Pinteres</option>
+        <option value="app21">Rappi</option>
+        <option value="app21">Santander móvil</option>
+        <option value="app21">Slack</option>
+        <option value="app21">Smart Fit</option>
+        <option value="app21">Spotify</option>
+        <option value="app21">Trello</option>
+        <option value="app21">Twitter</option>
+        <option value="app21">Uber</option>
+        <option value="app21">Uber Eats</option>
+        <option value="app21">Wifi</option>
+        <option value="app21">Youtube</option>
+      </select>
+
+      <p>
+        <label id="id_email">Correo electrónico</label>
+        <input type="text" placeholder="Registrado en la aplicación" id="id_email"></p>
+      <p>
+        <label for="id_msjACifrar" > Inserta una contraseña </label>
+        <input type="tetx" id= "id_msjACifrar"   name="porcifrar" placeholder="Letras,números,espacios y/o carácteres" >
+      </p>
+      <p>
+      <label for="id_offsetCif" >Fecha de nacimiento a seis dígitos</label>
+      <input type="text" id= "id_offsetCif" name="desplazamiento" placeholder="(DD/MM/AA">
+      </p>
+      <p></p><input type="button" value="Aceptar" name="botonCifrar" id="id_cifrar"></p>
       <p id="id_result" ></p>
 
+      <p>
+        <input type="button" value="Atras" id="id_seconRetunrMenu">
+        <input type="button" value="Inicio" id="id_seconReturnHome">
+      </p>
+
     </div>
 
-    <div id="screenDec">
+    <div id="id_screenDec">
 
-      <label for="id_msjADecifrar" > Inserta tu mensaje: </label>
-      <input type="tetx" id= "id_msjADecifrar"   name="pordecifrar" >
+      <h1 id="seePass">Consultar contraseña</h1>
+      <p>
+      <label for="id_msjADecifrar" > Inserta tu contraseña </label>
+      <input type="tetx" id= "id_msjADecifrar"   name="pordecifrar">
+      </p>
 
-      <label for="id_offsetDecif" >Ellige un número de seguridad:</label>
-      <input type="text" id= "id_offsetDecif" name="desplazamientoD" placeholder="Ingresa cualquier número">
+      <p>
+      <label for="id_offsetDecif" >Fecha de nacimiento a seis dígitos</label>
+      <input type="text" id= "id_offsetDecif" name="desplazamientoD" placeholder="DD/MM/AA">
+      </p>
 
-      <input type="button" value="decifrar" name="Decifrar" id="id_decifrar">
+      <p><input type="button" value="decifrar" name="Decifrar" id="id_decifrar"></p>
 
       <p id="id_result2" > </p>
+
+      <p>
+        <input type="button" value="Atras" id="id_thirdRetunrMenu">
+        <input type="button" value="Inicio" id="id_thirdReturnHome">
+      </p>
 
     </div>
 
