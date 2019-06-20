@@ -62,6 +62,7 @@ const newToHome =()=>{
   document.getElementById("id_offsetCif").value = "";
   document.getElementById("id_co").value = "";
   document.getElementById("id_appli").value = "";
+  document.getElementById("id_result").innerHTML="";
 };
 document.getElementById("id_home3").addEventListener("click",newToHome);
 
@@ -71,6 +72,7 @@ const newToMenu =()=>{
   document.getElementById("id_offsetCif").value = "";
   document.getElementById("id_co").value = "";
   document.getElementById("id_appli").value = "";
+  document.getElementById("id_result").innerHTML="";
 };
 document.getElementById("id_return3").addEventListener("click",newToMenu);
 
@@ -92,6 +94,8 @@ document.getElementById("id_home2").addEventListener("click",savToHome);
 const consToMenu =()=>{
   document.getElementById("id_consult").className = "hidden";
   document.getElementById("id_menu").className = "shown";
+  document.getElementById("id_offsetDecif").value = "";
+  document.getElementById("id_result2").innerHTML="";
   };
 document.getElementById("id_return4").addEventListener("click",consToMenu);
 
@@ -99,7 +103,7 @@ const consToHome =()=>{
   document.getElementById("id_consult").className = "hidden";
   document.getElementById("id_home").className = "shown";
   document.getElementById("id_offsetDecif").value = "";
-  document.getElementById("id_co").value = "";
+  document.getElementById("id_result2").innerHTML="";
 };
 document.getElementById("id_home4").addEventListener("click",consToHome);
 
