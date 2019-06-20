@@ -3,42 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>Padlock</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Lalezar|Mali|Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      
-      <h1>Padlock</h1>
-      <p><input type="text" placeholder="ingresa tu e-mail" id="id_usuario"></p>
-      <p><input type="text"  id="id_contraseña" placeholder="ingresa tu contraseña"></p>
-      <p><input type="button" value="ingresar" id="id_ingresar"></p>
 
-      
+       <div id="id_home" class="shown" >
+         <h1 id="encabezado" class="header">Padlock</h1>
+       <p>
+         <label for="id_user">Correo</label>
+         <input type="text" placeholder="ingresa tu e-mail" id="id_user" class="inputText"></p>
+       <p>
+         <label for="id_password">Contraseña</label>
+         <input type="text"  id="id_password" placeholder="ingresa tu contraseña"class="inputText2"></p>
+       <p>
+         <input type="button" value="Pasos" id="id_pasosboton" class="botonesmen">
+         <input type="button" value="Ingresar" id="id_ingresar" class="botonesmen">
+       </p>
     </div>
 
-    <div id="menu">
-      <h1 "id_titlePaswords">Tus contraseñas</h1>
-    <p><input type="button" value="Guardadas" id="id_Paswords"></p>
-    <p><input type="button" value="Generar nueva" id="id_newPasword"></p>
-    <p><input type="button" value="Consultar" id="id_newPasword"></p>
-    <p><input type="button" value="Atras" id="id_returnStar"></p>
-
+    <div id="id_menu" class="hidden">
+      <h1 id="id_titlePaswords" class="secund"> Tus contraseñas</h1>
+      <p><input type="button" value="Generar nueva" id="id_goNewPass" ></p>
+      <p><input type="button" value="Guardadas" id="id_goSaved" ></p>
+      <p><input type="button" value="Consultar" id="id_goConsult"></p>
+      <p><input type="button" value="Atras" id="id_return1" class="botonesmen"></p>
     </div>
 
-    <div id="id_PaswordsSaved">
-      <h1 id="id_titilePS"> Contraseñas guardadas</h1>
-      <p><input type="button" value="Guardar" id="id_savedPass"></p>
-      <p>
-        <input type="button" value="Atras" id="id_retunrMenu">
-        <input type="button" value="Inicio" id="id_returnHome">
+    <div id="id_passSaved"  class="hidden">
+      <h1 id="id_titilePS" class="secund" > Contraseñas guardadas</h1>
+      <p id="id_icons" >
+        <img src="../imagenes/airbnb.PNG" alt="Airbnb" width="8%" height="11%" >
+        <img src="../imagenes/amazon.PNG" alt="Amazon" width="8%" height="11%" >
+        <img src="../imagenes/didi.PNG" alt="Didi"  width="8%" height="11%" >
+        <img src="../imagenes/facebook.PNG" alt="Facebook" width="8%" height="11%" >
+        <img src="../imagenes/github.PNG" alt="Github" width="8%" height="11%" >
+        <img src="../imagenes/gmail.PNG" alt="Gmail"  width="8%" height="11%" >
+        <img src="../imagenes/instagram.PNG" alt="Instagram" width="8%" height="11%" >
+        <img src="../imagenes/linkedin.PNG" alt="Linkedin" width="8%" height="11%" >
+        <img src="../imagenes/pinterest.PNG" alt="Pinterest"  width="8%" height="11%" >
       </p>
-
+      <p>
+        <input type="button" value="Atras" id="id_retunr2" class="botonesmen">
+        <input type="button" value="Inicio" id="id_home2" class="botonesmen">
+      </p>
     </div>
 
-    <div id="id_NewPass">
-      <h1 id="id_titlNP"> Nueva contraseña </h1>
-      <label id="id_app">Aplicación</label>
-      <select name="App" id="id_app">
+    <div id="id_newPass" class="hidden">
+      <h1 id="id_titlNP" class="secund"> Nueva contraseña </h1>
+      <label for="id_appli">Aplicación</label>
+      <select name="App" id="id_appli">
         <option value=""></option>
         <option value="app1">Airbnb</option>
         <option value="app2">Amazon</option>
@@ -73,49 +87,72 @@
         <option value="app21">Wifi</option>
         <option value="app21">Youtube</option>
       </select>
-
       <p>
-        <label id="id_email">Correo electrónico</label>
-        <input type="text" placeholder="Registrado en la aplicación" id="id_email"></p>
+        <label for="id_co" >Correo electrónico</label>
+        <input type="text" placeholder="Registrado en la aplicación" id="id_co" class="inputText2"></p>
       <p>
         <label for="id_msjACifrar" > Inserta una contraseña </label>
-        <input type="tetx" id= "id_msjACifrar"   name="porcifrar" placeholder="Letras,números,espacios y/o carácteres" >
+        <input type="text" id= "id_msjACifrar"   name="porcifrar" placeholder="Letras,números,espacios y/o carácteres" class="inputText2">
       </p>
       <p>
       <label for="id_offsetCif" >Fecha de nacimiento a seis dígitos</label>
-      <input type="text" id= "id_offsetCif" name="desplazamiento" placeholder="(DD/MM/AA">
+      <input type="text" id= "id_offsetCif" name="desplazamiento" placeholder="(DD/MM/AA" class="inputText2">
       </p>
-      <p></p><input type="button" value="Aceptar" name="botonCifrar" id="id_cifrar"></p>
+      <p><input type="button" value="Aceptar" name="botonCifrar" id="id_cifrar" class="botonesmen"></p>
       <p id="id_result" ></p>
-
       <p>
-        <input type="button" value="Atras" id="id_seconRetunrMenu">
-        <input type="button" value="Inicio" id="id_seconReturnHome">
+        <input type="button" value="Atras" id="id_return3"class="botonesmen">
+        <input type="button" value="Inicio" id="id_home3"class="botonesmen">
       </p>
-
     </div>
 
-    <div id="id_screenDec">
-
-      <h1 id="seePass">Consultar contraseña</h1>
+    <div id="id_consult" class="hidden">
+      <h1 id="seePass" class="secund">Consultar contraseña</h1>
       <p>
-      <label for="id_msjADecifrar" > Inserta tu contraseña </label>
-      <input type="tetx" id= "id_msjADecifrar"   name="pordecifrar">
+      <label for="id_msjADecifrar"  > Inserta tu contraseña </label>
+      <input type="text" id= "id_msjADecifrar"   name="pordecifrar" class="inputText2" >
       </p>
 
       <p>
       <label for="id_offsetDecif" >Fecha de nacimiento a seis dígitos</label>
-      <input type="text" id= "id_offsetDecif" name="desplazamientoD" placeholder="DD/MM/AA">
+      <input type="text" id= "id_offsetDecif" name="desplazamientoD" placeholder="DD/MM/AA" >
       </p>
 
-      <p><input type="button" value="decifrar" name="Decifrar" id="id_decifrar"></p>
+      <p><input type="button" value="Mostrar" name="Decifrar" id="id_decifrar"class="botonesmen"></p>
 
-      <p id="id_result2" > </p>
+      <p><span id="id_result2"></span></p>
 
       <p>
-        <input type="button" value="Atras" id="id_thirdRetunrMenu">
-        <input type="button" value="Inicio" id="id_thirdReturnHome">
+        <input type="button" value="Atras" id="id_return4"class="botonesmen">
+        <input type="button" value="Inicio" id="id_home4"class="botonesmen">
       </p>
+    </div>
+
+    <div id="instructions" class="hidden">
+     <h2>Instrucciones</h2>
+     <p> <br>
+       Padlock es una aplicación diseñada para aquellas personas que necesitan guardar sus distintas <br>
+       contraseñas en un mismo sitio de manera segura, gracias al encriptamiento de las mismas.<br>
+       Lo unico que necesitas es registrarte de manera gratuita en nuestra aplicación y elegir una de<br>
+       las siguientes opciones  de nuestro menú:<br><br>
+
+       Genera una nueva contraseña:<br>
+          - Elige la aplicación para la cual vas a crear tu contraseña.<br>
+          - Ingresa el correo electrónico con el cuál te registraste o registrarás en la aplicación deseada.<br>
+          - Inserta cualquier palabra, carácter, número o/espacios.<br>
+          - Ingresa tu fecha de nacimiento a seis dígitos siguiendo el formato DD/MM/AA.<br>
+          - Pulsa guardar y listo.<br><br>
+
+       Contraseñas guardadas:<br>
+          - Pulsa sobre la aplicación deseada.<br>
+          - Copia la contraseña cifrada.<br><br>
+
+       Consultar contraseña:<br>
+          - Ingresa la contraseña cifrada.<br>
+          - Inserta tu fecha de nacimientos a seis dígitos.<br>
+          - Pulsa aceptar y podras ver tu contraseña.<br>
+     </p>
+      <p><input type="button"  value="Atras" id="atras" class="botonesmen"></p>
 
     </div>
 

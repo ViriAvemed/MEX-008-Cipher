@@ -1,5 +1,99 @@
 body {
    text-align: center;
-   padding: 2%;
+   padding: 0;
+   margin: 0;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-weight:bold;
+  color: orangered;
+  background-image: url("../imagenes/fondo.jpg");
+
+ }
+
+.hidden{
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+#id_home{
+  background-image: url("../imagenes/inicio.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15%;
+  margin: 0%;
+}
+
+.header{
+  justify-content: initial;
+  height: 5vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lalezar', cursive;
+  font-size: 700%;
+  color: hotpink;
+}
+
+.inputText{
+  margin-top: 10%;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 15px;
+  color: mediumvioletred;
+}
+.inputText2{
+  margin: 0;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 15px;
+  color: mediumseagreen;
+}
+
+.botonesmen{
+  font-family: 'Lalezar', cursive;
+  color: white;
+  background-color: mediumvioletred;
+  font-size: 90%;
+  border: 0;
+  width: 80px;
+  height: 19px;
+}
+
+.secund{
+  font-family: 'Lalezar', cursive;
+  font-size: 600%;
+  color: hotpink;
+
+}
+
+#id_goSaved{
+  font-family: 'Lalezar', cursive;
+  color: white;
+  background-color: orangered;
+  font-size: 150%;
+  border: 0;
+  width: 200px;
+  height: 50px;
+}
+#id_goNewPass{
+  font-family: 'Lalezar', cursive;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 150%;
+  border: 0;
+  width: 200px;
+  height: 50px;
+}
+#id_goConsult{
+  font-family: 'Lalezar', cursive;
+  color: white;
+  background-color: LIGHTGREEN;
+  font-size: 150%;
+  border: 0;
+  width: 200px;
+  height: 50px;
 }
 
